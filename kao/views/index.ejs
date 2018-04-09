@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <div class="wrap">
+    <header class="header">
+      <ul>
+          <li>
+              <span>精选</span>
+              <span>跟团游</span>
+              <span>自由行</span>
+              <span>当地游</span>
+              <span>邮轮游</span>
+          </li>
+          <li><button id="btn">登录</button></li>
+      </ul>
+    </header>
+    <section>
+      <div class="list">
+          <%data.forEach(function(v, i){%>
+            <dl>
+                <dt><img src="img/<%=v.img%>" alt=""></dt>
+                <dd>
+                    <h5><%=v.tit%></h5>
+                    <p><span>席位充足</span><a href="#">￥<%=v.price%></a></p>
+                </dd>
+            </dl>
+         <%})%>
+      </div>
+      <div class="info">
+        <div class="banner">
+           <ul>
+             <li><img src="img/banner.png" alt=""></li>
+             <li><img src="img/2.png" alt=""></li>
+             <li><img src="img/4.png" alt=""></li>
+             <li><img src="img/5.png" alt=""></li>
+           </ul>
+           <div class="pages">
+              <ol>
+                <li><img src="img/2.png" alt=""></li>
+                <li><img src="img/3.png" alt=""></li>
+                <li><img src="img/4.png" alt=""></li>
+                <li><img src="img/5.png" alt=""></li>
+              </ol>
+           </div>
+        </div>
+        <div class="right">
+            <div class="top">
+              <span>编号：18388006</span>
+              <span>出发地：上海</span>
+              <span>更多线路</span>
+            </div>
+            <div class="cont">
+              以色列耶路撒冷+死海+伯利恒8日5晚跟团游·【自营-价包|含签证小费】【上海直飞赠联运】【四大升级景点+圣地深游】【死海海滩俱乐部漂浮】【赠加利利湖游船+双重好礼】
+            </div>
+            <div class="prices">
+              <span><a href="#">￥12690 </a>/人起价说</span>
+              <span><a href="#">5.0分</a>4条点评  24人出游</span>
+            </div>
+            <ul class="quan">
+                <li>领券</li>
+                <li><img src="img/pic1.png" alt=""></li>
+                <li><img src="img/pic2.png" alt=""></li>
+                <li><img src="img/pic3.png" alt=""></li>
+                <li><img src="img/pic4.png" alt=""></li>
+                <li>更多></li>
+            </ul>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script src="javascript/jquery.js"></script>
+  <script>
+      $('.header').on('click','span', function(){
+        console.log(0);
+          $(this).addClass('active').siblings().removeClass('active');
+      });
+      $('#btn').on('click',function(){
+         location.href='/login';
+      });
+      $('.pages').on('click','li',function(){
+          var ind = $(this).index();
+          var liW = $('.banner ul li').width();
+          console.log(liW);
+          $('.banner ul').css({
+            left:-liW*ind
+          })
+      })
+  </script>
+</body>
+</html>

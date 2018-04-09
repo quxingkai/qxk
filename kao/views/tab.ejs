@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div class="list">
+        <%data.forEach(function(v, i){%>
+          <dl>
+              <dt><img src="img/<%=v.img%>" alt=""></dt>
+              <dd>
+                  <h5><%=v.tit%></h5>
+                  <p><span>席位充足</span><a href="#">￥<%=v.price%></a></p>
+              </dd>
+          </dl>
+       <%})%>
+    </div>
+</body>
+</html>

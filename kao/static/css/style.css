@@ -1,0 +1,169 @@
+*{
+  padding:0;
+  margin:0;
+  list-style: none;
+  text-decoration: none;
+  box-sizing: border-box;
+}
+.wrap{
+  overflow: hidden;
+  width:100%;
+  /* height:600px; */
+}
+.header{
+  width:100%;
+  height:50px;
+}
+.header ul{
+
+  padding: 0 20px;
+  width:100%;
+  height:50px;
+  display: flex;
+  justify-content: space-between;
+  align-items:center;
+}
+.header ul li{
+  flex:1;
+}
+.header ul li span{
+  cursor: pointer;
+  margin: 0 10px;
+  color:#3983E5;
+}
+.header ul li span.active{
+  color:#fff;
+  background: #3983E5;
+}
+.header ul li:nth-child(2){
+  text-align: right;
+}
+.header ul li:nth-child(2) button {
+  border:0;
+  padding:4px 4px;
+  color:#FC7373;
+  background: #fff;
+  border: 1px solid #FC7373;
+}
+section .list{
+  width:100%;
+  padding: 0 30px;
+}
+section .list dl{
+  float: left;
+  margin:10px 60px 10px 0;
+}
+section .list dl dd h5{
+  font-weight: 400;
+  font-size: 16px;
+}
+section .list dl dd p{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+section .list dl dd{
+  color:#B1AFAE;
+}
+section .list dl dd a{
+  color:#FF7700;
+}
+.info{
+  padding: 0 30px;
+  width:100%;
+}
+.info .banner{
+  position: relative;
+  float: left;
+  overflow: hidden;
+  height:320px;
+  width:469px;
+
+}
+.info .banner ul{
+  position: absolute;
+  height:254px;
+  left:0;
+  top:0;
+  width:400%;
+}
+.info .banner ul li{
+  float: left;
+}
+.info .banner ul li img{
+  width:469px;
+  height:254px;
+}
+.info .right{
+  float: left;
+  width: 750px;;
+}
+.info .banner .pages{
+  margin-top:254px;
+  width:100%;
+}
+.info .banner .pages ol li{
+  float: left;
+}
+.info .banner .pages img{
+  width:117px;
+}
+.right .top{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-left:20px;
+  width:100%;
+  border-bottom:1px solid #ccc;
+  height:50px;
+}
+.right .top span{
+  flex:1;
+}
+.right .top span:nth-child(2){
+  border-left:1px solid #ccc;
+  border-right:1px solid #ccc;
+  text-align: center;
+}
+.right .top span:nth-child(3){
+  text-align:right;
+}
+.right .cont{
+  margin:15px 0 15px;
+  width:100%;
+  padding-left:20px;
+  line-height: 36px;
+  font-size: 26px;
+}
+.right .prices{
+  width:100%;
+  padding-left:20px;
+  display: flex;
+}
+.right .prices span{
+  font-size: 16px;
+  flex:1;
+}
+.right .prices span:nth-child(2){
+  text-align: right;
+}
+.right .prices span a{
+  font-size: 26px;
+  margin-right:5px;
+  color:#FF5F1E;
+}
+.quan{
+  margin-top:20px;
+  width:100%;
+  padding-left:20px;
+  display: flex;
+}
+.quan li{
+  height:50px;
+  line-height: 50px;
+  margin-right: 20px;
+}
+.quan li:nth-child(6){
+  width:200px;
+  text-align: right;
+}

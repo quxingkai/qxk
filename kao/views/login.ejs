@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <style>
+  *{
+    padding:0;
+    margin:0;
+  }
+  .wrap{
+    text-align: center;
+    width:200px;
+    height:230px;
+    margin:40px auto;
+    border:4px solid #92C9F8;
+  }
+  #user{
+    margin-top:20px;
+    width:90%;
+    height:30px;
+  }
+  #pwd{
+    margin-top:20px;
+    width:90%;
+    height:30px;
+  }
+  #loginBtn{
+    margin-top:20px;
+    width:90%;
+    height:30px;
+    border:0;
+    background: orange;
+    color:#fff;
+
+  }
+  </style>
+</head>
+<body>
+    <div class="wrap">
+        <input type="text" placeholder="请输入用户名" id="user"></br>
+        <input type="password" placeholder="请输入密码" id="pwd"></br>
+        <input type="button" value="登录" id="loginBtn">
+    </div>
+    <script src="javascript/jquery.js"></script>
+    <script>
+       $('#loginBtn').on('click',function(){
+           $.ajax({
+             url:'/logined',
+             type:'post',
+             data:{
+               user:$('#user').val(),
+               pwd:$('#pwd').val()
+             },
+             success:function(data){
+               alert(data.msg);
+                if(data.code === 0){
+                  location.href='/user'
+                }
+             }
+           }) 
+       })
+    </script>
+</body>
+</html>
